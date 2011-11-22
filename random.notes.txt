@@ -1,0 +1,16 @@
+Systeme:
+========
+Apertium:
+---------
+* RBMT
+- Siehe Folien vom 29.9.2011 (S. 8: Chart darüber, wie Apertium (grob) funktioniert)
+
+Moses:
+------
+* SBMT
+
+Denkbares, Testmaterial (abstrakt; vgl. Folien vom 29.9.2011 S. 9):
+* Mehrdeutigkeiten
+* Syntaktische Diskrepanzen
+* Idiomatische Ausdrücke
+* Koreferenzauflösung
