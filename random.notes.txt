@@ -1,16 +1,43 @@
 Systeme:
 ========
+Anusaaraka:
+* RBMT
+* GPL
+
 Apertium:
----------
+* GPL
 * RBMT
 - Siehe Folien vom 29.9.2011 (S. 8: Chart darüber, wie Apertium (grob) funktioniert)
 
+Matxin
+* GPL
+* RBMT
+
 Moses:
-------
+* LGPL
 * SBMT
+* plattformunabhängig
+
+OpenMaTrEx:
+
+OpenLogos
+* RBMT
+
+Generell, Vorteile FOSS-Systeme:
+--------------------------------
+- Nicht (nur) wirtschaftliche Kriterien sind massgebend für die Entwicklung
 
 Denkbares, Testmaterial (abstrakt; vgl. Folien vom 29.9.2011 S. 9):
 * Mehrdeutigkeiten
 * Syntaktische Diskrepanzen
 * Idiomatische Ausdrücke
 * Koreferenzauflösung
+
+Links:
+------
+* Open-source machine translation: an opportunity for minor languages
+URL: http://www.dlsi.ua.es/~mlf/docum/forcada06p2.pdf
+* Combining Machine Translation Output with Open Source
+URL: http://ufal.mff.cuni.cz/pbml/93/art-heafield-lavie.pdf
+* Comparison of machine translation applications
+URl: http://en.wikipedia.org/wiki/Comparison_of_machine_translation_applications
