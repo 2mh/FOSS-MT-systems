@@ -22,6 +22,8 @@ OpenMaTrEx:
 
 OpenLogos
 * RBMT
+* GPL
+URL: http://de.wikipedia.org/wiki/OpenLogos (Mit Links zu Mailinglisten usw.)
 
 Generell, Vorteile FOSS-Systeme:
 --------------------------------
@@ -40,4 +42,12 @@ URL: http://www.dlsi.ua.es/~mlf/docum/forcada06p2.pdf
 * Combining Machine Translation Output with Open Source
 URL: http://ufal.mff.cuni.cz/pbml/93/art-heafield-lavie.pdf
 * Comparison of machine translation applications
-URl: http://en.wikipedia.org/wiki/Comparison_of_machine_translation_applications
+URL: http://en.wikipedia.org/wiki/Comparison_of_machine_translation_applications
+* Preparing Training Data (Moses)
+URL: http://www.statmt.org/moses/?n=FactoredTraining.PrepareTraining
+* Klingon texts
+URL: http://teresh.tdonnelly.org/klintext.html
+* The Klingon Language Version of the World English Bible Psalms
+URL: http://ia600509.us.archive.org/3/items/TheKlingonLanguageVersionOfTheWorldEnglishBiblePsalms/kp.html#k80
+* Training sessions on Open Source Machine Translation: Yielding Moses
+URL: http://www.crosslang.com/training-sessions-open-source-machine-translation
