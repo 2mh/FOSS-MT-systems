@@ -1,0 +1,185 @@
+% Time-stamp: <2010-11-18T00:58:22 mxp>
+% -*- coding: iso-8859-1 -*-
+\documentclass[11pt,twoside]{mparticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, ngerman]{babel}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage[scaled]{helvet}
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+
+% Avoid widows and orphans
+\widowpenalty50000
+\clubpenalty50000
+
+% Override the macros defined in the BibTeX style
+\newcommand{\doi}[1]{doi: %
+  \href{http://dx.doi.org/#1}{\urlstyle{rm}\nolinkurl{#1}}}
+\newcommand{\eric}[1]{ERIC \href{http://eric.ed.gov/ERICWebPortal/contentdelivery/servlet/ERICServlet?accno=#1}{#1}}
+
+% URL with access date
+\newcommand{\urld}[2][???]{\url{#2} (\iflanguage{ngerman}{letzter
+    Zugriff:}{accessed} #1)}
+
+% Examples for the definition of convenience commands
+\newcommand{\package}[1]{\texttt{#1}}
+\newcommand{\first}[1]{\emph{#1}}
+\newcommand{\q}[1]{\iflanguage{ngerman}{\flqq#1\frqq}{``#1''}}
+
+% Title page information
+\title{Titel des Referats\\
+  \large Referat im Seminar \q{Maschinelle \"Ubersetzung} (HS 2011)}
+\author{Donald Duck}
+\date{22. September 2011}
+
+\begin{document}
+\maketitle
+
+\section{Zu den handouts}
+\label{sec:zu-handouts}
+
+Jeder sollte bis spätestens 7 tage vor seinem referatstermin einen
+vorschlag für die gemeinsame lektüre und das handout einreichen.
+
+Zusammen mit allen inhaltlichen daten ist ein ausgefülltes und
+unterschriebenes exemplar der erklärung zu den grundregeln der
+akademischen ehrlichkeit (im ordner \q{Materialien -- Vorlagen/Admin})
+abzugeben.
+
+Das handout (auch bekannt als exposé, thesenpapier oder disposition)
+soll
+
+\begin{itemize}
+\item den titel des referat enthalten,
+\item im stil eines abstracts aus allgemeiner sicht mit ca. 60 bis 100
+  wörtern den gehalt des referats beschreiben und
+\item den aufbau des referats in abschnitten von etwa 2 bis 7 minuten
+  kurz und bündig darlegen.
+\end{itemize}
+
+Der grundsätzlich aufbau eines referats (und im prinzip jeder
+wissenschaftlichen arbeit) ist:
+
+\begin{enumerate}
+\item Problem oder fragestellung
+\item Lösungsansatz
+\item Evaluation
+\end{enumerate}
+
+Außerdem geben Sie bitte die wichtigsten literaturreferenzen an (siehe
+abschnitt~\ref{sec:referenzen}) und den vorschlag für die gemeinsame
+lektüre.
+
+\section{Die klasse \package{mparticle}}
+\label{sec:mparticle}
+
+Die klasse \package{mparticle}\footnote{Erhältlich von
+  \urld[2011-09-20]{http://dynalabs.de/mxp/latex/}} wurde von Michael
+Piotrowski entwickelt und kann grundsätzlich als direkter ersatz für
+die \LaTeX-standardklasse \package{article} verwendet werden. Einige
+unterschiede zwischen \package{mparticle} und \package{article} sind
+jedoch zu erwähnen.
+
+\package{mparticle} verwendet automatisch A4 als seitenformat, es muss
+also nicht extra angegeben werden.
+
+Der vielleicht größte unterschied ist, dass bei \package{mparticle}
+bild- und tabellenunterschriften innerhalb einer \texttt{figure}- bzw.
+\texttt{table}-umgebung \emph{vor} dem eigentlichen bild\footnote{Für
+  die einbindung von grafiken muss das paket \package{graphicx} mit
+  geladen werden.} bzw. der eigentlichen tabelle definiert werden
+sollten, z.\,b.:
+
+\begin{verbatim}
+\begin{table}[!ht]
+  \caption{Erläuterung zur tabelle}
+  \begin{tabular}{|l|l|}
+    .
+    .
+    .
+  \end{tabular}
+  \label{tab:terms}
+\end{table}
+\end{verbatim}
+
+Vergleiche auch die beispiele im quelltext dieses dokuments. Die
+angabe der bild- bzw. tabellenunterschrift nach dem bild bzw. der
+tabelle resultiert in einem unerwünschten und unschönen
+erscheinungsbild.
+
+Wenn Sie \package{listings} oder \package{longtable} verwenden, müssen
+Sie noch zusätzliche definitionen laden, damit die listing-
+bzw. tabellenunterschriften an der richtigen position erscheinen.
+
+\section{Referenzen}
+\label{sec:referenzen}
+
+Verwenden Sie für Ihre arbeit \package{natbib} für zitate.
+\package{natbib} stellt verschiedene zitierbefehle bereit, die Sie je
+nach kontext verwenden sollten:
+
+\begin{itemize}
+\item Verwenden Sie \verb|\citep| für parenthetische referenzen,
+  z.\,b.:
+
+  \begin{quote}
+    Bereits vor den 1980er jahren gab es forschung zu
+    autorenwerkzeugen, die NLP-techniken verwendete. \citep{dale1997}
+  \end{quote}
+\item Verwenden Sie \verb|\citet| für referenzen im text, z.\,b.:
+
+  \begin{quote}
+    \citet{stallman1981} beschreibt mit dem Emacs einen editor, bei
+    dem die benutzer teile auswechseln können.
+  \end{quote}
+\item Verwenden Sie \verb|citeauthor|, um nur den oder die
+  autorennamen zu erhalten, z.\,b.:
+
+  \begin{quote}
+    \citeauthor{knutsson2005} stellte \citeyear{knutsson2005} fest:
+    \q{Writing and written language play today an increasingly
+      important part in many people's lives.} \citep[S.~3]{knutsson2005}
+  \end{quote}
+
+  Mit \verb|\citeyear| kann man auf das jahr einer veröffentlichung
+  zugreifen.
+\end{itemize}
+
+\package{natbib} stellt noch weitere zitierkommandos zur verfügung,
+hierfür sei auf die dokumentation verwiesen (in Ihrer lokalen
+\TeX-installation oder auch online\footnote{\urld[2011-09-20]{http://www.ctan.org/tex-archive/macros/latex/contrib/natbib/natbib.pdf}}).
+
+Bei elektronischen oder elektronisch verfügbaren publikationen
+verwenden Sie in Ihrer \textsc{Bib}\TeX-datei entweder das feld
+\verb|doi| (für veröffentlichungen, die einen DOI haben) oder die
+felder \verb|url| und \verb|urldate| zur angabe eines URL und des
+letzten zugriffs.
+
+Für URLs im text (wenn ein bibliografieeintrag nicht sinnvoll ist) ist
+oben in dieser beispieldatei das makro \verb|\urld| für datierte URLs
+definiert; die eingabe
+
+\begin{verbatim}
+\urld[2011-09-20]{http://adobe.com/}
+\end{verbatim}
+
+erscheint dann als
+
+\begin{quote}
+  \urld[2011-09-20]{http://adobe.com/}
+\end{quote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+
+\bibliographystyle{plain-de} % for German
+% \bibliographystyle{mpplainnat} % for English
+\bibliography{seminar}
+
+\end{document}
+
+%%% Local variables:
+%%% TeX-PDF-mode: t
+%%% End:

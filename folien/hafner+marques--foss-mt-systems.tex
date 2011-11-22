@@ -1,0 +1,61 @@
+% beamer
+\documentclass{clsemhs11-beamer}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+% Führt zu Probs (noch)
+%\usepackage[T1]{fontenc}
+\usepackage{helvet}
+
+\newcommand{\first}[1]{\emph{#1}}
+\newcommand{\q}[1]{\iflanguage{ngerman}{\flqq#1\frqq}{``#1''}}
+
+\title{Maschinelle \"Ubersetzung}
+\subtitle{Seminar \q{Maschinelle \"Ubersetzung} (HS~2011)}
+\author{Minnie Mausie}
+\date{\today}
+
+\begin{document}
+  \maketitle
+
+\begin{frame}
+  \frametitle{Der Titel der ersten Folie}
+
+  Die folgenden Punkte werden nach und nach aufgedeckt:
+  
+  \begin{itemize}[<+->]
+  \item Foo
+  \item Bar
+  \item Baz
+  \end{itemize}
+
+  Diese dagegen erscheinen aufs Mal:
+
+  \begin{itemize}
+  \item Foo
+  \item Bar
+  \item Baz
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Der Titel der zweiten Folie}
+
+  Beispiel einer Grafik:
+
+  \includegraphics[width=\textwidth]{graphics/dilbert-unix}
+
+  Breite und Höhe muss man je nach Format anpassen.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Beamer}
+
+  Beamer hat eine irrsinnige Zahl von Optionen, siehe Handbuch:
+
+  \url{http://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf}
+\end{frame}
+\end{document}
+
+%%% Local variables:
+%%% TeX-PDF-mode: t
+%%% End:
