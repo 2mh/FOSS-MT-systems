@@ -21,6 +21,16 @@ Moses:
 ** Kann als Basis für kommerzielle Produkte genutzt werden
 ** Geringe Total Cost of Ownership (CrossLang-URL)
 ** Geringe Time-To-Market (CrossLang-URL)
+** Minderheitssprachen
+Möglichkeit zur HAMT um Text in der Sprache zu generieren.
+** Klingonisch
+Bräuchte garantiert Morphologie, weil klingonisch sehr agglutinierend
+ist, sparse data Problem.
+** Aufbau
+- beam
+- phrase-based (example-based)
+- factored (see klingon)
+- confusion networks (WFST)
 * SBMT
 URL: http://www.statmt.org/moses/
 URL: http://en.wikipedia.org/wiki/Moses_%28machine_translation%29
