@@ -42,26 +42,6 @@
 
 Systeme:
 --------
-Anusaaraka:
-* RBMT
-* GPL
-URL: http://anusaaraka.iiit.ac.in/
-
-Apertium:
-* GPL
-* RBMT
-** Siehe Folien vom 29.9.2011 (S. 8: Chart darüber, wie Apertium (grob) funktioniert)
-** Genauer ausführen
-URL: http://www.apertium.org/
-
-Matxin
-* GPL
-* RBMT
-* Nur erwähnen
-URL: http://matxin.sf.net/
-
-Moses:
-* LGPL
 URL: http://www.statmt.org/moses/
 URL: http://en.wikipedia.org/wiki/Moses_%28machine_translation%29
 
@@ -99,7 +79,6 @@ Denkbares, Testmaterial (abstrakt; vgl. Folien vom 29.9.2011 S. 9):
 
 Links:
 ------
-* Open-source machine translation: an opportunity for minor languages
 URL: http://www.dlsi.ua.es/~mlf/docum/forcada06p2.pdf
 * Combining Machine Translation Output with Open Source
 URL: http://ufal.mff.cuni.cz/pbml/93/art-heafield-lavie.pdf
@@ -134,8 +113,7 @@ URL: http://meta.wikimedia.org/wiki/Wikipedia_Machine_Translation_Project
 \begin{abstract}
 Wir beschäftigen uns in unserem Referat mit maschinellen Übersetzungssystemen
 (MÜ-Systemen), deren Quellcode als Open Source Software (OSS) frei verfügbar ist. 
-Nach einer Einführung der verschiedenen (grösseren) Systemen, die in diesem 
-Bereich existieren, möchten wir thematisieren, weshalb OSS-MÜ-Systeme Vorteile
+Wir möchten thematisieren, weshalb OSS-MÜ-Systeme Vorteile
 gegenüber kommerziellen oder MÜ-Systemen ohne frei verfügbaren Quellcode (Closed Source Software) aufweisen.
 Den (praktischen) Fokus legen wir auf zwei Systeme: Apertium und Moses. Insbesondere im
 Bereich von Minderheitensprachen (z. B. Klingonisch) versprechen OSS-MÜ-Systeme dazu beizutragen diese 
@@ -145,18 +123,18 @@ beizutragen, dass diese Sprachen (in ihrer Nutzung) an Bedeutung gewinnen.
 
 \section{Einleitung}
 \label{einleitung}
-Wir legen zunächst (\ref{problemstellung}) die Problematik dar, die wir mit Closed Source-MÜ-Systemen sehen. 
-In einem weiteren Schritt bieten wir einen Überblick (Kap. \ref{ueberblick}) über die (grösseren) MÜ-Systeme,
-die Open Source-Software sind, um uns im Folgekapitel \ref{apertiumMoses} auf nur zwei Systeme zu beschränken, 
-von denen eines regelbasiert, das andere statistisch-basiert ist. Wir führen diese Systeme praktisch vor. Gegenstand von
-Kapitel \ref{herausforderungen} sind die Herausforderungen und (unsere) möglichen Lösungsansätze.
+Wir legen zunächst die Problematik (Kap. \ref{problemstellung}) dar, die wir mit Closed Source-MÜ-Systemen sehen. 
+In einem weiteren Schritt präsentieren wir MÜ-Systeme,
+die quelloffen sind, wobei wir uns auf nur zwei Systeme beschränken (Kap. \ref{apertiumMoses}), 
+von denen eines regelbasiert, das andere (primär) statistisch-basiert ist. Wir führen diese Systeme praktisch vor. Gegenstand von
+Kap. \ref{herausforderungen} sind die Herausforderungen und (unsere) möglichen Lösungsansätze.
 Unsere Lektüreempfehlungen finden sich am Schluss (Kap. \ref{lektuere}) dieses Handouts.
 
 \section{Problemstellung}
 \label{problemstellung}
 Closed Source Software (CSS) ist Software, deren Quellcode unter Verschluss gehalten wird. Viele bekanntere MÜ-Systeme,
-seien sie webbasiert, wie Google Translate, oder für den stationären persönlichen oder unternehmsweiten Einsatz, 
-wie MÜ-Software von Linguatec, sind im Quellcode nicht verfügbar. 
+seien sie webbasiert, wie Google Translate\footnote{\urld[2011-11-24]{http://translate.google.com/}}, oder für den stationären persönlichen oder unternehmsweiten Einsatz, 
+wie MÜ-Software von Linguatec\footnote{\urld[2011-11-24]{http://www.linguatec.de/products/}}, sind im Quellcode nicht verfügbar. 
 \\
 \\
 Gerade bei kommerziellen Systemen werden in der Regel nur verbreite Sprachpaare unterstützt. Das hat wirtschaftliche
@@ -167,74 +145,131 @@ Klingonisch, so steht man bei CSS-MÜ-Systemen üblicherweise vor verschlossenen
 Das Problem der Transparenz stellt sich aber nicht nur hinsichtlich der Software an und für sich. Eine weitere Dimension
 stellen die linguistischen Ressourcen dar, wie bei regelbasierten Ansätzen das verwendete Lexikon und die dazugehörige 
 Annotation. Es ist technisch möglich diese Ressourcen einem CSS-System zu entlocken, allerdings mögen dies die
-Lizenzbedingungen untersagen. Bei statistisch-basierten Systemen ist in aller Regel nicht transparenz einsehbar,
-welchen Korpus sich hinter dem System verbirgt. Sind bei einem CSS-System wenigstens die Ressourcen im Geiste von
-Open Source verfügbar und (frei) nutzbar, so ist uns mehr Freiheit gegeben.
+Lizenzbedingungen untersagen. Bei statistisch-basierten Systemen ist in aller Regel nicht transparent einsehbar,
+welchen Korpus sich hinter dem System verbirgt. Sind bei einem CSS-System wenigstens die Ressourcen im Sinne von
+Open Source (frei) nutzbar, so ist der Spielraum bereits grösser (vgl. \cite{forcada} ab Kapitel 2.1).
 
 \section{Herausforderungen \& Lösungsansätze}
 \label{herausforderungen}
-Eine Minderheitensprache zu implementiern, ist bei CSS unmöglich, da
+Eine Minderheitensprache zu implementiern, ist bei CSS schwierig, da
 zu jeder Sprache wenigstens ein paar Regeln gehören. Im Falle von
 Apertium kann man ein Kuhdorf-Dialekt von Katalanisch mit relativ
 wenig Aufwand hinzufügen. Dies würde vielleicht sogar mit einer etwas
-angepassten Wortliste erreichen, da die Grammatik vermutlich sehr
-ähnlich ist. Bei Sprachen, die stärker abweichen, wie z.B. Klingonisch
-benötigen wir jedoch mindestens eine einfache Syntaxerkennung um
-halbwegs brauchbare Ergebnisse zu erzielen. Diese in eine OSS zu
-implementieren sollte sich wesentlich einfacher gestalten als bei
+angepassten Wortliste erreicht, da die Sytax vermutlich sehr
+ähnlich wäre. Bei Sprachen, die stärker abweichen, wie z. B. Klingonisch,
+das stark agglutinierend ist, benötigen wir jedoch mindestens eine einfache 
+Syntaxerkennung, um halbwegs brauchbare Ergebnisse zu erzielen. Diese in eine OSS zu
+implementieren, sollte sich wesentlich einfacher gestalten als bei
 einer CSS.
-
-\section{Überblick: OSS-MÜ-Systeme}
-\label{ueberblick}
+\\
+\\
+Ein Problem besteht für Minderheitensprachen generell: Es liegt wenig Sprachmaterial vor, weil die Sprache
+in der (heutigen) Hauptressource des Webs wenig verbreitet ist. Gleichzeitig kann der OSS-Ansatz mit seiner
+offenen Austauschkultur dazu beitragen, dass dieses Wissen gemehrt wird, wenn die Entwicklung öffentlich
+erfolgt. Sind schliesslich MÜ-Systeme verfügbar, welche von Minderheitensprachen in weiter verbreite
+Sprachen, wie Deutsch oder Englisch, übersetzen können, so kann die Sichtbarkeit der Minderheitensprachen
+und damit auch die Verfügbarkeit linguistischen Sprachmaterials erhöht werden; denn: es wird Autoren möglich in der
+Minderheitensprache Texte zu verfassen, im Wissen darüber, dass eine Übersetzung für grössere Leserschaften (in
+andere Sprachen) möglich ist (vgl. \cite{forcada} ab Kapitel 5).
 
 \section{Zwei OSS-MÜ-Systeme: Apertium und Moses}
 \label{apertiumMoses}
-
+Im Folgenden stellen wir zwei OSS-MÜ-Systeme vor: Apertium und Moses.
 
 \subsection{Apertium}
 \label{apertium}
-Apertium ist ein RBMT-System, das 28 Sprachpaare 
+
+\subsubsection{Abriss}
+Apertium\footnote{\urld[2011-11-24]{http://www.apertium.org/}} ist ein RBMT-System, das 28 Sprachpaare 
 (teilweise in bidirektionaler Übersetzungsrichtung) beherrscht. Es fällt auf, dass darunter
 Minderheitensprachen zu finden sind, die (wirtschaftlich) wenig rentabel scheinen -
-u. a.: Katalanisch, Esperanto, Baskisch. Die Software mit allen zugehörigen
-linguistischen Ressourcen unterstehen der General Public License (GPL), einer Lizenz, die von der Free Software
-Foundation stammt. Dies erlaubt es die Software in veränderter Form zu betreiben unter
-der wichtigen Bedingung, dass auch Einsicht in den Quellcode möglich ist.
+u. a.: Katalanisch, Esperanto, Baskisch. Finanziell unterstützt wird das Projekt von der spanischen
+Zentralregierung. Die Software mit allen zugehörigen
+linguistischen Ressourcen untersteht der General Public License\footnote{\urld[2011-11-24]{http://www.gnu.org/copyleft/gpl.html}} (GPL), einer Lizenz, die von der Free Software
+Foundation stammt. Diese erlaubt es die Software in veränderter Form zu vertreiben - unter
+der wichtigen Bedingung, dass auch Einsicht in den Quellcode möglich ist. Einige linguistischen Daten sind mit 
+Creative Commons-Lizenzen\footnote{\urld[2011-11-04]{http://creativecommons.org/licenses/}} belegt, welche
+zumindest eine Nutzung für nicht-kommerzielle Zwecke erlauben.
 
 \subsubsection{Technologien}
+Im Folgenden erfolgt eine Auswahl von drei Technologien, die Apertium einsetzt:
+\begin{itemize}
+	\item[Shallow-Transfer] Im einfachsten Fall sucht Apertium im Quelltext nach Sequenzmustern von
+	Wörtern, die in einem Katalog festgehalten sind; die Übersetzung erfolgt direkt (in einem
+	Schritt) anhand eines Bilexikons in die Zielsprache. Dieses Verfahren, bekannt als ``Shallow-Transfer'',
+	funktioniert nur bei syntaxähnlichen Sprachen (vgl. \cite{forcadaDoc} S.73ff.)
+	\item[Advanced Transfer] Seit das Sprachpaar Englisch-Katalanisch unterstützt wird, erfolgt die
+	Übersetzung in einem (fortgeschrittenen) 3-Schritte-Prozess (vgl. ebd. S.77ff.):
+	\begin{enumerate}
+	\item Im \emph{Chunking} werden Satzkonstituenten der Quellsprache erfasst, die Wort-für-Wort-Übersetzung
+        betrieben und ferner morphosyntakische Anpassungen für die Zielsprache markiert.
+	\item Es erfolgt im \emph{Interchunking} eine Neuordnung der Satzkonstituenten gemäss der Zielsprache. 
+	\item Abschliessend werden mittels \emph{Postchunking} Anpassungen der Wortformen (gemäss den Markierungen
+        des 2. Schritts) vorgenommen und der Text in die Zielsprache geschrieben (validiert vom Sprachgenerator).
+	\end{enumerate}
+	\item[XML] Die linguisischen Daten werden im XML-Format gehalten (vgl. ebd. S.114ff.), aus Gründen
+	           der Interoperabilität. So sind diese auch für andere MÜ-Systeme (theoretisch) verwendbar. Bei
+		   CSS-Systemen wird im Gegenzug oftmals (bewusst) auf proprietäre, nicht-standardisierte Formate gesetzt.
+\end{itemize}
 
 \subsection{Moses}
 \label{moses}
-\subsubsection{Propaganda}
-Da Moses unter der LGPL lizenziert ist, kann es als Basis für
-kommerzielle Produkte verwendet werden. So kann man eigene Korpora und
-ein GUI hinzufügen und das ganze als Paket verkaufen. Zudem entstehen
-keine Kosten durch Lizenzgebühren. Der interessante Teil ist zudem,
-dass es die Möglichkeit bietet, eine Minderheitssprache zu
-implementieren. Es hat zudem eine betrachtliche Anzahl von
-Sprachpaaren, die eine vielseitige Anwendung ermöglichen.
+
+\subsubsection{Abriss}
+Moses\footnote{\urld[2011-11-24]{http://www.statmt.org/moses/}} ist primär ein SBMT-System. 
+Da es unter der LGPL\footnote{\urld[2011-11-24]{http://www.gnu.org/licenses/lgpl.html}} lizenziert ist, kann es als (kosenfreie) Basis für
+kommerzielle Produkte verwendet werden. Es ist z. B. denkbar eigene Korpora einzubinden und
+ein GUI hinzuzufügen, um in der Folge das Ganze als benutzerfreundliches Paket zu verkaufen.
+Der interessante Teil ist zudem,
+dass es die Möglichkeit bietet, eine Minderheitensprache zu
+implementieren. Es wird bereits eine betrachtliche Anzahl von
+Sprachpaaren unterstützt, die eine umfassende Anwendung ermöglichen.
 
 \subsubsection{Technologien}
 \begin{itemize}
-  \item[beam] Moses verwendet den beam Algorithmus, um effizient zu
-    einem Ergebnis zu kommen. (SBMT)
-  \item[phrase-based] Viele Sätze werden direkt aus einem Korpus
-    übernommen, wenn es ein Beispiel gibt (EBMT)
-  \item[factored] Zudem verwendet Moses noch Regeln, um flektierende
-    und agglutinierende Sprachen wie Kingonisch auseinanderzuziehen,
-    um die einzelnen Teile übersetzen zu können. (RBMT)
-  \item[confusion networks] Als Input können auch WFST (weighted
-    finite state transducer) verwendet werden, aus z.B. einem
-    Speech2Text-System.
+  \item[Beam search] Moses verwendet den ``Beam search''-Algorithmus, um im Rahmen
+  seiner SBMT-Ansätzen effizient zu einem Ergebnis zu kommen (vgl. \cite{norvig}).
+  \item[Phrase-based] Viele Sätze werden direkt aus einem Korpus
+    übernommen, wenn es ein Beispiel gibt; das sind Ansätze aus der EBMT (Example-Based
+Machine Translation).
+  \item[Factored] Moses verwendet zudem Regeln, um flektierende
+    und agglutinierende Sprachen, wie Klingonisch, so zu verarbeiten, dass
+    die einzelnen Teile übersetzt werden können; dafür muss die Morphologie der
+    Sprache bekannt sein. Dafür können Regeln definiert werden, was aufzeigt, dass
+    Moses ebenso auf den RBMT-Ansatz setzt.
+  \item[Confusion networks] Als Input können auch ``Confusion networks'' bzw. WFST (weighted
+    finite state transducer) verwendet werden, aus z. B. einem
+    Speech2Text-System (vgl. den Moses-Wikiartikel\footnote{\urld[2011-11-24]{http://www.statmt.org/moses/?n=Moses.ConfusionNetworks}} zu dieser Thematik).
 \end{itemize}
 
 \section{Lektüreempfehlungen}
 \label{lektuere}
-
+Als wichtigste Lektüre empfehlen wir den interessanten Text ``Open-source
+machine translation: an opportunity for minor languages'', welcher als Leitartikel
+für unseren Beitrag gelten kann. Der Artikel ist im PDF verfügbar (vgl. \cite{forcada}).
+Wir empfehlen ferner die Webseiten von Apertium und Moses zu durchstöbern, um Einblick in die
+Welt von OSS-MÜ-Systemen zu erhalten:
+\begin{itemize}
+\item \url{http://www.apertium.org/} (Mit Web-Übersetzer)
+\item \url{http://www.statmt.org/moses}
+\end{itemize}
+Wir wünschen viel Spass!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 
 \bibliographystyle{plain-de} % for German
 % \bibliographystyle{mpplainnat} % for English
-\bibliography{seminar}
+%\bibliography{seminar}
+\begin{thebibliography}{...............}
+\bibitem[Norvig1992]{norvig}
+Norvig, Peter: \emph{Paradigms of artificial intelligence programming: case studies in common LISP}. S.195-196. San Fransisco: Morgan.
+\bibitem[Forcada2010]{forcadaDoc}
+Forcada Mikel L. et al.: \emph{Documentation of the Open-Source Shallow-Transfer Machine Translation Platform Apertium}.\\
+URL: \urld[2011-11-24]{http://xixona.dlsi.ua.es/~fran/apertium2-documentation.pdf}
+
+\bibitem[Forcada2006]{forcada}
+Forcada, Mikel L.: \emph{Open-source machine translation: an opportunity for minor languages}. In: Strategies for developing machine translation for minority languages (5th SALTMIL workshop on Minority Languages).\\URL: \urld[2011-11-24]{http://www.dlsi.ua.es/~mlf/docum/forcada06p2.pdf}
+
+\end{thebibliography}
+
 \end{document}
