@@ -9,6 +9,7 @@
 \usepackage[scaled]{helvet}
 \usepackage[numbers]{natbib}
 \usepackage{hyperref}
+\usepackage{verbatim}
 
 % Avoid widows and orphans
 \widowpenalty50000
@@ -37,7 +38,7 @@
 \begin{document}
 \maketitle
 
-\begin{verbatim}
+\begin{comment}
 
 Systeme:
 --------
@@ -142,46 +143,47 @@ URL: http://events.ccc.de/congress/2006/Fahrplan/events/1701.en.html
 URL: http://en.wikipedia.org/wiki/Comparison_of_machine_translation_applications
 * Wikipedia Machine Translation Project
 URL: http://meta.wikimedia.org/wiki/Wikipedia_Machine_Translation_Project
-\end{verbatim}
+\end{comment}
 
-\section{Abstract}
-\label{abstract}
-In unserem Referat möchten wir einen Überblick über MÜ-Systeme
+\begin{abstract}
+Wir beschäftigen uns in unserem Referat mit maschinellen Übersetzungssystemen
+(MÜ-Systemen), deren Quellcode als Open Source Software (OSS) frei verfügbar ist. 
+Nach einer Einführung der verschiedenen (grösseren) Systemen, die in diesem 
+Bereich existieren, möchten wir thematisieren, weshalb OSS-MÜ-Systeme Vorteile
+gegenüber kommerziellen oder MÜ-Systemen ohne frei verfügbaren Quellcode (Closed Source Software) aufweisen.
+Den (praktischen) Fokus legen wir auf zwei Systeme: Apertium und Moses. Insbesondere im
+Bereich von Minderheitensprachen (z. B. Klingonisch) versprechen OSS-MÜ-Systeme dazu beizutragen diese 
+im Web sichtbarer zu machen und somit das Verständnis über ihre Funktionsweise zu erhöhen und dazu
+beizutragen, dass diese Sprachen (in ihrer Nutzung) an Bedeutung gewinnen.
+\end{abstract}
 
 \section{Einleitung}
-\label{grundlagen}
-\begin{verbatim}
-- sparse-data-Problem
-\end{verbatim}
-
-\section{Überblick}
-\label{ueberblick}
-\begin{verbatim}
-- sparse-data-Problem
-\end{verbatim}
-
+\label{einleitung}
+Wir legen zunächst (\ref{problemstellung}) die Problematik dar, die wir mit Closed Source-MÜ-Systemen sehen. 
+In einem weiteren Schritt bieten wir einen Überblick (Kap. \ref{ueberblick}) über die (grösseren) MÜ-Systeme,
+die Open Source-Software sind, um uns im Folgekapitel \ref{apertiumMoses} auf nur zwei Systeme zu beschränken, 
+von denen eines regelbasiert, das andere statistisch-basiert ist. Wir führen diese Systeme praktisch vor. Gegenstand von
+Kapitel \ref{herausforderungen} sind die Herausforderungen und (unsere) möglichen Lösungsansätze.
+Unsere Lektüreempfehlungen finden sich am Schluss (Kap. \ref{lektuere}) dieses Handouts.
 
 \section{Problemstellung}
 \label{problemstellung}
-\begin{verbatim}
-- sparse-data-Problem
-\end{verbatim}
-
-
-\section{Begriffe \& Grundlagen}
-\label{grundlagen}
-\begin{verbatim}
-- sparse-data-Problem
-\end{verbatim}
-
-\section{Herausforderungen \& -lösungsansätze}
+Closed Source Software (CSS) ist Software, deren Quellcode unter Verschluss gehalten wird. Viele bekanntere MÜ-Systeme,
+seien sie webbasiert, wie Google Translate, oder für den stationären persönlichen oder unternehmsweiten Einsatz, 
+wie MÜ-Software von Linguatec, sind im Quellcode nicht verfügbar. 
+\\
+\\
+Gerade bei kommerziellen Systemen werden in der Regel nur verbreite Sprachpaare unterstützt. Das hat wirtschaftliche
+Gründe (Rentabilität). Hat man zum Ziel ein Übersetzungssystem für eine Minderheitensprache zu entwickeln, wie beispielsweise 
+Klingonisch, so steht man bei CSS-MÜ-Systemen üblicherweise vor verschlossenen Türen.
+\section{Herausforderungen \& Lösungsansätze}
 \label{herausforderungen}
-\begin{verbatim}
-- sparse-data-Problem
-\end{verbatim}
 
-\section{Zusammenfassung}
-\label{zusammenfassung}
+\section{Überblick: OSS-MÜ-Systeme}
+\label{ueberblick}
+
+\section{Zwei OSS-MÜ-Systeme: Apertium und Moses}
+\label{apertiumMoses}
 
 \section{Lektüreempfehlungen}
 \label{lektuere}
