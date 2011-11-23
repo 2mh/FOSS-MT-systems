@@ -62,20 +62,6 @@ URL: http://matxin.sf.net/
 
 Moses:
 * LGPL
-** Kann als Basis für kommerzielle Produkte genutzt werden
-** Geringe Total Cost of Ownership (CrossLang-URL)
-** Geringe Time-To-Market (CrossLang-URL)
-** Minderheitssprachen
-Möglichkeit zur HAMT um Text in der Sprache zu generieren.
-** Klingonisch
-Bräuchte garantiert Morphologie, weil klingonisch sehr agglutinierend
-ist, sparse data Problem.
-** Aufbau
-- beam
-- phrase-based (example-based)
-- factored (see klingon)
-- confusion networks (WFST)
-* SBMT
 URL: http://www.statmt.org/moses/
 URL: http://en.wikipedia.org/wiki/Moses_%28machine_translation%29
 
@@ -205,8 +191,32 @@ einer CSS.
 \label{apertiumMoses}
 
 \subsection{Apertium}
+\label{apertium}
 
 \subsection{Moses}
+\label{moses}
+\subsubsection{Propaganda}
+Da Moses unter der LGPL lizenziert ist, kann es als Basis für
+kommerzielle Produkte verwendet werden. So kann man eigene Korpora und
+ein GUI hinzufügen und das ganze als Paket verkaufen. Zudem entstehen
+keine Kosten durch Lizenzgebühren. Der interessante Teil ist zudem,
+dass es die Möglichkeit bietet, eine Minderheitssprache zu
+implementieren. Es hat zudem eine betrachtliche Anzahl von
+Sprachpaaren, die eine vielseitige Anwendung ermöglichen.
+
+\subsubsection{Technologien}
+\begin{itemize}
+  \item[beam] Moses verwendet den beam Algorithmus, um effizient zu
+    einem Ergebnis zu kommen. (SBMT)
+  \item[phrase-based] Viele Sätze werden direkt aus einem Korpus
+    übernommen, wenn es ein Beispiel gibt (EBMT)
+  \item[factored] Zudem verwendet Moses noch Regeln, um flektierende
+    und agglutinierende Sprachen wie Kingonisch auseinanderzuziehen,
+    um die einzelnen Teile übersetzen zu können. (RBMT)
+  \item[confusion networks] Als Input können auch WFST (weighted
+    finite state transducer) verwendet werden, aus z.B. einem
+    Speech2Text-System.
+\end{itemize}
 
 \section{Lektüreempfehlungen}
 \label{lektuere}
