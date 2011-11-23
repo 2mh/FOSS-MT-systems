@@ -184,8 +184,19 @@ Annotation. Es ist technisch möglich diese Ressourcen einem CSS-System zu entlo
 Lizenzbedingungen untersagen. Bei statistisch-basierten Systemen ist in aller Regel nicht transparenz einsehbar,
 welchen Korpus sich hinter dem System verbirgt. Sind bei einem CSS-System wenigstens die Ressourcen im Geiste von
 Open Source verfügbar und (frei) nutzbar, so ist uns mehr Freiheit gegeben.
+
 \section{Herausforderungen \& Lösungsansätze}
 \label{herausforderungen}
+Eine Minderheitensprache zu implementiern, ist bei CSS unmöglich, da
+zu jeder Sprache wenigstens ein paar Regeln gehören. Im Falle von
+Apertium kann man ein Kuhdorf-Dialekt von Katalanisch mit relativ
+wenig Aufwand hinzufügen. Dies würde vielleicht sogar mit einer etwas
+angepassten Wortliste erreichen, da die Grammatik vermutlich sehr
+ähnlich ist. Bei Sprachen, die stärker abweichen, wie z.B. Klingonisch
+benötigen wir jedoch mindestens eine einfache Syntaxerkennung um
+halbwegs brauchbare Ergebnisse zu erzielen. Diese in eine OSS zu
+implementieren sollte sich wesentlich einfacher gestalten als bei
+einer CSS.
 
 \section{Überblick: OSS-MÜ-Systeme}
 \label{ueberblick}
