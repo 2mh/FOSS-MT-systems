@@ -29,147 +29,162 @@
 \newcommand{\q}[1]{\iflanguage{ngerman}{\flqq#1\frqq}{``#1''}}
 
 % Title page information
-\title{Titel des Referats\\
+\title{Open Source-MÜ-Systeme\\
   \large Referat im Seminar \q{Maschinelle \"Ubersetzung} (HS 2011)}
-\author{Donald Duck}
-\date{22. September 2011}
+\author{Simon Hafner \& Hernani Marques}
+\date{01. Dezember 2011}
 
 \begin{document}
 \maketitle
 
-\section{Zu den handouts}
-\label{sec:zu-handouts}
-
-Jeder sollte bis spätestens 7 tage vor seinem referatstermin einen
-vorschlag für die gemeinsame lektüre und das handout einreichen.
-
-Zusammen mit allen inhaltlichen daten ist ein ausgefülltes und
-unterschriebenes exemplar der erklärung zu den grundregeln der
-akademischen ehrlichkeit (im ordner \q{Materialien -- Vorlagen/Admin})
-abzugeben.
-
-Das handout (auch bekannt als exposé, thesenpapier oder disposition)
-soll
-
-\begin{itemize}
-\item den titel des referat enthalten,
-\item im stil eines abstracts aus allgemeiner sicht mit ca. 60 bis 100
-  wörtern den gehalt des referats beschreiben und
-\item den aufbau des referats in abschnitten von etwa 2 bis 7 minuten
-  kurz und bündig darlegen.
-\end{itemize}
-
-Der grundsätzlich aufbau eines referats (und im prinzip jeder
-wissenschaftlichen arbeit) ist:
-
-\begin{enumerate}
-\item Problem oder fragestellung
-\item Lösungsansatz
-\item Evaluation
-\end{enumerate}
-
-Außerdem geben Sie bitte die wichtigsten literaturreferenzen an (siehe
-abschnitt~\ref{sec:referenzen}) und den vorschlag für die gemeinsame
-lektüre.
-
-\section{Die klasse \package{mparticle}}
-\label{sec:mparticle}
-
-Die klasse \package{mparticle}\footnote{Erhältlich von
-  \urld[2011-09-20]{http://dynalabs.de/mxp/latex/}} wurde von Michael
-Piotrowski entwickelt und kann grundsätzlich als direkter ersatz für
-die \LaTeX-standardklasse \package{article} verwendet werden. Einige
-unterschiede zwischen \package{mparticle} und \package{article} sind
-jedoch zu erwähnen.
-
-\package{mparticle} verwendet automatisch A4 als seitenformat, es muss
-also nicht extra angegeben werden.
-
-Der vielleicht größte unterschied ist, dass bei \package{mparticle}
-bild- und tabellenunterschriften innerhalb einer \texttt{figure}- bzw.
-\texttt{table}-umgebung \emph{vor} dem eigentlichen bild\footnote{Für
-  die einbindung von grafiken muss das paket \package{graphicx} mit
-  geladen werden.} bzw. der eigentlichen tabelle definiert werden
-sollten, z.\,b.:
-
 \begin{verbatim}
-\begin{table}[!ht]
-  \caption{Erläuterung zur tabelle}
-  \begin{tabular}{|l|l|}
-    .
-    .
-    .
-  \end{tabular}
-  \label{tab:terms}
-\end{table}
+
+Systeme:
+--------
+Anusaaraka:
+* RBMT
+* GPL
+URL: http://anusaaraka.iiit.ac.in/
+
+Apertium:
+* GPL
+* RBMT
+** Siehe Folien vom 29.9.2011 (S. 8: Chart darüber, wie Apertium (grob) funktioniert)
+** Genauer ausführen
+URL: http://www.apertium.org/
+
+Matxin
+* GPL
+* RBMT
+* Nur erwähnen
+URL: http://matxin.sf.net/
+
+Moses:
+* LGPL
+** Kann als Basis für kommerzielle Produkte genutzt werden
+** Geringe Total Cost of Ownership (CrossLang-URL)
+** Geringe Time-To-Market (CrossLang-URL)
+** Minderheitssprachen
+Möglichkeit zur HAMT um Text in der Sprache zu generieren.
+** Klingonisch
+Bräuchte garantiert Morphologie, weil klingonisch sehr agglutinierend
+ist, sparse data Problem.
+** Aufbau
+- beam
+- phrase-based (example-based)
+- factored (see klingon)
+- confusion networks (WFST)
+* SBMT
+URL: http://www.statmt.org/moses/
+URL: http://en.wikipedia.org/wiki/Moses_%28machine_translation%29
+
+OpenMaTrEx:
+* EBMT
+URL: http://openmatrex.org/
+
+OpenLogos
+* RBMT
+* GPL
+URL: http://de.wikipedia.org/wiki/OpenLogos (Mit Links zu Mailinglisten usw.)
+URL: http://logos-os.dfki.de/
+URL: http://sourceforge.net/apps/mediawiki/openlogos-mt/index.php?title=Main_Page
+URL: http://sourceforge.net/projects/openlogos-mt/
+
+Weitere: Siehe letconex.blogspot-Link unten
+
+Technologien:
+-------------
+* Shallow-Transfer: Kein Wissen über den Text vorausgesetzt
+-- Bei SBMT üblich
+* Deep-
+
+Generell, Vorteile FOSS-Systeme:
+--------------------------------
+- Nicht (nur) wirtschaftliche Kriterien sind massgebend für die Entwicklungsarbeit
+
+Wie testen wir?
+----------------
+Denkbares, Testmaterial (abstrakt; vgl. Folien vom 29.9.2011 S. 9):
+* Mehrdeutigkeiten
+* Syntaktische Diskrepanzen
+* Idiomatische Ausdrücke
+* Koreferenzauflösung
+
+Links:
+------
+* Open-source machine translation: an opportunity for minor languages
+URL: http://www.dlsi.ua.es/~mlf/docum/forcada06p2.pdf
+* Combining Machine Translation Output with Open Source
+URL: http://ufal.mff.cuni.cz/pbml/93/art-heafield-lavie.pdf
+* Comparison of machine translation applications
+URL: http://en.wikipedia.org/wiki/Comparison_of_machine_translation_applications
+* Preparing Training Data (Moses)
+URL: http://www.statmt.org/moses/?n=FactoredTraining.PrepareTraining
+* Klingon texts
+URL: http://teresh.tdonnelly.org/klintext.html
+* The Klingon Language Version of the World English Bible Psalms
+URL: http://ia600509.us.archive.org/3/items/TheKlingonLanguageVersionOfTheWorldEnglishBiblePsalms/kp.html#k80
+* Training sessions on Open Source Machine Translation: Yielding Moses
+URL: http://www.crosslang.com/training-sessions-open-source-machine-translation
+* Multi-Engine Machine Translation with an Open-Source (SMT) Decoder
+URL: http://www.dfki.de/lt/publication_show.php?id=2643
+* Second International Workshop: On Free/Open-Source Rule-Based Machine Translation
+URL: http://www.uoc.edu/freerbmt11/
+** Proceedings: URL: http://openaccess.uoc.edu/webapps/o2/handle/10609/4661/browse?type=title&submit_browse=T%C3%ADtol
+* Machine Translation (Wikipedia)
+URL: http://en.wikipedia.org/wiki/Machine_translation
+* Free/open-source machine translation software
+URL: http://letconex.blogspot.com/2011/11/freeopen-source-machine-translation.html
+* Open Source Machine Translation: From tools, to tricks, to projects: build a translation engine from Klingon to Finnish in an hour
+URL: http://chaosradio.ccc.de/23c3_m4v_1701.html
+URL: http://events.ccc.de/congress/2006/Fahrplan/events/1701.en.html
+* Comparison of machine translation applications
+URL: http://en.wikipedia.org/wiki/Comparison_of_machine_translation_applications
+* Wikipedia Machine Translation Project
+URL: http://meta.wikimedia.org/wiki/Wikipedia_Machine_Translation_Project
 \end{verbatim}
 
-Vergleiche auch die beispiele im quelltext dieses dokuments. Die
-angabe der bild- bzw. tabellenunterschrift nach dem bild bzw. der
-tabelle resultiert in einem unerwünschten und unschönen
-erscheinungsbild.
+\section{Abstract}
+\label{abstract}
+In unserem Referat möchten wir einen Überblick über MÜ-Systeme
 
-Wenn Sie \package{listings} oder \package{longtable} verwenden, müssen
-Sie noch zusätzliche definitionen laden, damit die listing-
-bzw. tabellenunterschriften an der richtigen position erscheinen.
-
-\section{Referenzen}
-\label{sec:referenzen}
-
-Verwenden Sie für Ihre arbeit \package{natbib} für zitate.
-\package{natbib} stellt verschiedene zitierbefehle bereit, die Sie je
-nach kontext verwenden sollten:
-
-\begin{itemize}
-\item Verwenden Sie \verb|\citep| für parenthetische referenzen,
-  z.\,b.:
-
-  \begin{quote}
-    Bereits vor den 1980er jahren gab es forschung zu
-    autorenwerkzeugen, die NLP-techniken verwendete. \citep{dale1997}
-  \end{quote}
-\item Verwenden Sie \verb|\citet| für referenzen im text, z.\,b.:
-
-  \begin{quote}
-    \citet{stallman1981} beschreibt mit dem Emacs einen editor, bei
-    dem die benutzer teile auswechseln können.
-  \end{quote}
-\item Verwenden Sie \verb|citeauthor|, um nur den oder die
-  autorennamen zu erhalten, z.\,b.:
-
-  \begin{quote}
-    \citeauthor{knutsson2005} stellte \citeyear{knutsson2005} fest:
-    \q{Writing and written language play today an increasingly
-      important part in many people's lives.} \citep[S.~3]{knutsson2005}
-  \end{quote}
-
-  Mit \verb|\citeyear| kann man auf das jahr einer veröffentlichung
-  zugreifen.
-\end{itemize}
-
-\package{natbib} stellt noch weitere zitierkommandos zur verfügung,
-hierfür sei auf die dokumentation verwiesen (in Ihrer lokalen
-\TeX-installation oder auch online\footnote{\urld[2011-09-20]{http://www.ctan.org/tex-archive/macros/latex/contrib/natbib/natbib.pdf}}).
-
-Bei elektronischen oder elektronisch verfügbaren publikationen
-verwenden Sie in Ihrer \textsc{Bib}\TeX-datei entweder das feld
-\verb|doi| (für veröffentlichungen, die einen DOI haben) oder die
-felder \verb|url| und \verb|urldate| zur angabe eines URL und des
-letzten zugriffs.
-
-Für URLs im text (wenn ein bibliografieeintrag nicht sinnvoll ist) ist
-oben in dieser beispieldatei das makro \verb|\urld| für datierte URLs
-definiert; die eingabe
-
+\section{Einleitung}
+\label{grundlagen}
 \begin{verbatim}
-\urld[2011-09-20]{http://adobe.com/}
+- sparse-data-Problem
 \end{verbatim}
 
-erscheint dann als
+\section{Überblick}
+\label{ueberblick}
+\begin{verbatim}
+- sparse-data-Problem
+\end{verbatim}
 
-\begin{quote}
-  \urld[2011-09-20]{http://adobe.com/}
-\end{quote}
+
+\section{Problemstellung}
+\label{problemstellung}
+\begin{verbatim}
+- sparse-data-Problem
+\end{verbatim}
+
+
+\section{Begriffe \& Grundlagen}
+\label{grundlagen}
+\begin{verbatim}
+- sparse-data-Problem
+\end{verbatim}
+
+\section{Herausforderungen \& -lösungsansätze}
+\label{herausforderungen}
+\begin{verbatim}
+- sparse-data-Problem
+\end{verbatim}
+
+\section{Zusammenfassung}
+\label{zusammenfassung}
+
+\section{Lektüreempfehlungen}
+\label{lektuere}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
@@ -177,9 +192,4 @@ erscheint dann als
 \bibliographystyle{plain-de} % for German
 % \bibliographystyle{mpplainnat} % for English
 \bibliography{seminar}
-
 \end{document}
-
-%%% Local variables:
-%%% TeX-PDF-mode: t
-%%% End:
