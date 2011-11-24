@@ -228,18 +228,18 @@ Sprachpaaren unterstützt, die eine umfassende Anwendung ermöglichen.
 \subsubsection{Technologien}
 \begin{itemize}
   \item[Beam search] Moses verwendet den ``Beam search''-Algorithmus, um im Rahmen
-  seiner SBMT-Ansätzen effizient zu einem Ergebnis zu kommen (vgl. \cite{norvig}).
+    seiner SBMT-Ansätzen effizient zu einem Ergebnis zu kommen
+    (vgl. \cite{norvig}). Dieser Algorithmus ist eine Mischung aus A*
+    und breadth-first search mit reduziertem Speicherverbrauch im
+    Vergleich zu best-first.
   \item[Phrase-based] Viele Sätze werden direkt aus einem Korpus
     übernommen, wenn es ein Beispiel gibt; das sind Ansätze aus der EBMT (Example-Based
-Machine Translation).
+    Machine Translation).
   \item[Factored] Moses verwendet zudem Regeln, um flektierende
     und agglutinierende Sprachen, wie Klingonisch, so zu verarbeiten, dass
     die einzelnen Teile übersetzt werden können; dafür muss die Morphologie der
     Sprache bekannt sein. Dazu können Regeln definiert werden, was aufzeigt, dass
     Moses ebenso einen RBMT-Ansatz unterstützt.
-  \item[Confusion networks] Als Input können auch ``Confusion networks'' bzw. WFST (weighted
-    finite state transducer) verwendet werden, aus z. B. einem
-    Speech2Text-System (vgl. den Moses-Wikiartikel\footnote{\urld[2011-11-24]{http://www.statmt.org/moses/?n=Moses.ConfusionNetworks}} zu dieser Thematik).
 \end{itemize}
 
 \section{Lektüreempfehlungen}
