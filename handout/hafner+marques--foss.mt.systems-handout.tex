@@ -194,11 +194,11 @@ zumindest eine Nutzung für nicht-kommerzielle Zwecke erlauben.
 \subsubsection{Technologien}
 Im Folgenden erfolgt eine Auswahl von drei Technologien, die Apertium einsetzt:
 \begin{itemize}
-	\item[Shallow-Transfer] Im einfachsten Fall sucht Apertium im Quellsprachtext nach Sequenzmustern von
+	\item[\emph{Shallow-Transfer}] Im einfachsten Fall sucht Apertium im Quellsprachtext nach Sequenzmustern von
 	Wörtern, die in einem Katalog festgehalten sind; die Übersetzung erfolgt direkt (in einem
 	Schritt) anhand eines Bilexikons in die Zielsprache. Dieses Verfahren, bekannt als ``Shallow-Transfer'',
 	funktioniert nur bei syntaxähnlichen Sprachen (vgl. \cite{forcadaDoc} S.73ff.)
-	\item[Advanced Transfer] Seit das Sprachpaar Englisch-Katalanisch unterstützt wird, erfolgt die
+	\item[\emph{Advanced Transfer}] Seit das Sprachpaar Englisch-Katalanisch unterstützt wird, erfolgt die
 	Übersetzung in einem (fortgeschrittenen) 3-Schritte-Prozess (vgl. ebd. S.77ff.):
 	\begin{enumerate}
 	\item Im \emph{Chunking} werden Satzkonstituenten der Quellsprache erfasst, die Wort-für-Wort-Übersetzung
@@ -207,7 +207,7 @@ Im Folgenden erfolgt eine Auswahl von drei Technologien, die Apertium einsetzt:
 	\item Abschliessend werden mittels \emph{Postchunking} Anpassungen der Wortformen (gemäss den Markierungen
         des 2. Schritts) vorgenommen und der Text in die Zielsprache geschrieben (validiert vom Sprachgenerator).
 	\end{enumerate}
-	\item[XML] Die linguistischen Daten werden im XML-Format gehalten (vgl. ebd. S.114ff.), aus Gründen
+	\item[\emph{XML}] Die linguistischen Daten werden im XML-Format gehalten (vgl. ebd. S.114ff.), aus Gründen
 	           der Interoperabilität. So sind diese auch für andere MÜ-Systeme (theoretisch) verwendbar. Bei
 		   CSS-Systemen wird im Gegenzug oftmals (bewusst) auf proprietäre, nicht-standardisierte Formate gesetzt.
 \end{itemize}
@@ -227,15 +227,14 @@ Sprachpaaren unterstützt, die eine umfassende Anwendung ermöglichen.
 
 \subsubsection{Technologien}
 \begin{itemize}
-  \item[Beam search] Moses verwendet den ``Beam search''-Algorithmus, um im Rahmen
+  \item[\emph{Beam search}] Moses verwendet den ``Beam search''-Algorithmus, um im Rahmen
     seiner SBMT-Ansätzen effizient zu einem Ergebnis zu kommen
-    (vgl. \cite{norvig}). Dieser Algorithmus ist eine Mischung aus A*
-    und breadth-first search mit reduziertem Speicherverbrauch im
-    Vergleich zu best-first.
-  \item[Phrase-based] Viele Wordfolgen werden direkt aus einem Korpus
+    (vgl. \cite{norvig}). Dieser Algorithmus ist eine Mischung aus den Algorithmen ``A*''
+    und ``Breadth-first search'' mit reduziertem Speicherverbrauch - im Vergleich zu ``Best-first''.
+  \item[\emph{Phrase-based}] Viele Wordfolgen werden direkt aus einem Korpus
     übernommen, wenn es ein Beispiel gibt; das sind Ansätze aus der EBMT (Example-Based
     Machine Translation).
-  \item[Factored] Moses unterstützt mehrdimensionale Daten für einzelne
+  \item[\emph{Factored}] Moses unterstützt mehrdimensionale Daten für einzelne
     Tokens, was es möglich macht, manuell Regeln zu implementieren, um
     dem System bei stark flektierenden bzw. agglutinierenden Sprachen auf die
     Sprünge zu helfen. Dies ist bei z.B. Quechua / Kingonisch extrem hilfreich.
