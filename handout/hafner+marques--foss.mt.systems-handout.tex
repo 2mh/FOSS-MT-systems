@@ -232,14 +232,13 @@ Sprachpaaren unterstützt, die eine umfassende Anwendung ermöglichen.
     (vgl. \cite{norvig}). Dieser Algorithmus ist eine Mischung aus A*
     und breadth-first search mit reduziertem Speicherverbrauch im
     Vergleich zu best-first.
-  \item[Phrase-based] Viele Sätze werden direkt aus einem Korpus
+  \item[Phrase-based] Viele Wordfolgen werden direkt aus einem Korpus
     übernommen, wenn es ein Beispiel gibt; das sind Ansätze aus der EBMT (Example-Based
     Machine Translation).
-  \item[Factored] Moses verwendet zudem Regeln, um flektierende
-    und agglutinierende Sprachen, wie Klingonisch, so zu verarbeiten, dass
-    die einzelnen Teile übersetzt werden können; dafür muss die Morphologie der
-    Sprache bekannt sein. Dazu können Regeln definiert werden, was aufzeigt, dass
-    Moses ebenso einen RBMT-Ansatz unterstützt.
+  \item[Factored] Moses unterstützt mehrdimensionale Daten für einzelne
+    Tokens, was es möglich macht, manuell Regeln zu implementieren, um
+    dem System bei stark flektierenden bzw. agglutinierenden Sprachen auf die
+    Sprünge zu helfen. Dies ist bei z.B. Quechua / Kingonisch extrem hilfreich.
 \end{itemize}
 
 \section{Lektüreempfehlungen}
