@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \BOOKMARK [2][]{Outline0.1}{Problemstellung}{}
 \BOOKMARK [3][]{Outline0.1.1.3}{\334bersetzen von und nach Minderheitensprachen}{Outline0.1}
 \BOOKMARK [3][]{Outline0.1.2.5}{Closed Source vs. Open Source Software}{Outline0.1}
@@ -8,3 +9,13 @@
 \BOOKMARK [3][]{Outline0.3.2.15}{Moses}{Outline0.3}
 \BOOKMARK [2][]{Outline0.5}{Fazit}{}
 \BOOKMARK [2][]{Outline0.6}{Fragen}{}
+=======
+\BOOKMARK [2][]{Outline0.1}{Problemstellung}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.3}{\334bersetzen von und nach Minderheitensprachen}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.5}{Closed Source vs. Open Source Software}{Outline0.1}% 3
+\BOOKMARK [2][]{Outline0.2}{Herausforderungen \046 L\366sungsans\344tze}{}% 4
+\BOOKMARK [2][]{Outline0.3}{Zwei OSS-M\334-Systeme: Apertium und Moses}{}% 5
+\BOOKMARK [3][]{Outline0.3.1.12}{Apertium}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.2.17}{Moses}{Outline0.3}% 7
+\BOOKMARK [2][]{Outline0.5}{Fragen}{}% 8
+>>>>>>> 821fd76ebda0d0d7aae8da4355c4459b9a32fd9f
