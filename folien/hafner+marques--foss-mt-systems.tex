@@ -6,6 +6,10 @@
 \usepackage{helvet}
 \usepackage{beamerthemesplit}
 \usepackage[numbers]{natbib}
+\usepackage[small]{caption}
+\usetheme{Antibes}
+
+\setbeamertemplate{navigation symbols}{}
 
 \newcommand{\first}[1]{\emph{#1}}
 \newcommand{\q}[1]{\iflanguage{ngerman}{\flqq#1\frqq}{``#1''}}
@@ -17,6 +21,8 @@
 \subtitle{Seminar \q{Maschinelle \"Ubersetzung} (HS~2011)}
 \author{Simon Hafner \& Hernani Marques}
 \date{\today}
+
+\small
 
 \begin{document}
   \maketitle
@@ -143,7 +149,7 @@
 \item 1-Pass-Modell
 \end{itemize}
 \begin{figure}
-  \includegraphics[width=0.30\textwidth]{graphics/xml}
+  \includegraphics[width=0.60\textwidth]{graphics/apertiummodule}
   \caption{Apertium-Module\footnote{URL: \url{http://wiki.apertium.eu/images/thumb/9/99/Figure_1_dibuix.svg/768px-Figure_1_dibuix.svg.png} (30.11.2011)}}
   \end{figure}
 \end{frame}
@@ -156,14 +162,14 @@
 \end{frame}
 \begin{frame}
 \frametitle{Technologien (XML)}
-\begin{figure}
-  \includegraphics[width=0.30\textwidth]{graphics/xml}
-  \caption{XML-Beispiel\footnote{URL: \url{http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/XML.svg/275px-XML.svg.png} (30.11.2011)}}
-  \end{figure}
 \begin{itemize}
 \item Linguistische Daten werden in der XML gehalten
 \item Interoperabilität ist damit gesichert
 \end{itemize}
+\begin{figure}
+  \includegraphics[width=0.30\textwidth]{graphics/xml}
+  \caption{XML-Beispiel\footnote{URL: \url{http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/XML.svg/275px-XML.svg.png} (30.11.2011)}}
+  \end{figure}
 \end{frame}
 \subsection{Moses}
 % XXX: Hier Änderungen einpflanzen
@@ -185,6 +191,21 @@ URL: \url{http://xixona.dlsi.ua.es/~fran/apertium2-documentation.pdf} (30.11.201
 Forcada, Mikel L.: \emph{Open-source machine translation: an opportunity for minor languages}. In: Strategies for developing machine translation for minority languages (5th SALTMIL workshop on Minority Languages).\\URL: \url{http://www.dlsi.ua.es/~mlf/docum/forcada06p2.pdf} (30.11.2011)
 \end{thebibliography}
 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fazit}
+\begin{frame}
+\frametitle{Auswirkungen: Einsatz von OSS-MÜ-Systemen}
+\begin{itemize}
+\item Minderheitensprachen können durch Open Source-MÜ-Systeme mehr Verbreitung finden
+ \begin{itemize}
+ \item RBMT: Apertium
+ \item SBMT: Moses
+ \end{itemize}
+\item Sprechende von Minderheiten können sich stärker ihrer eigenen Sprache bedienen
+\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
