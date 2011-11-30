@@ -14,7 +14,6 @@
 \newcommand{\first}[1]{\emph{#1}}
 \newcommand{\q}[1]{\iflanguage{ngerman}{\flqq#1\frqq}{``#1''}}
 \def\newblock{\hskip .11em plus.33em minus.07em}
-
 \renewcommand{\footnotesize}{\tiny}
 
 \title{Open Source-MÜ-Systeme}
@@ -110,9 +109,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Herausforderungen \& Lösungsansätze}
 \begin{frame}
-\frametitle{Titel}
+  \frametitle{Herausforderungen}
+  \begin{itemize}
+    \item Minderheitensprache implementieren
+    \item Kein kommerzieller Support
+    \item Sparse-Data Problem
+    \item stark agglutinierende Sprachen
+  \end{itemize}
 \end{frame}
-\subsection{Sparse data-Probleme}
+\begin{frame}
+  \frametitle{Herausforderung (1)}
+  \begin{itemize}
+    \item[Problem] Kein kommerzieller Support
+    \item[Lösung] Auf den Schultern von Giganten
+    \item[Lösung] OSS Systeme
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{Herausforderung (2)}
+  \begin{itemize}
+    \item[Problem] Sparse-Data Problem
+    \item[Problem] stark agglutinierende Sprachen
+    \item[Lösung] Regeln implementieren
+    \item[Lösung] Zirkuläre Implikation \cite{forcada}
+  \end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,11 +192,74 @@
   \caption{XML-Beispiel\footnote{URL: \url{http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/XML.svg/275px-XML.svg.png} (30.11.2011)}}
   \end{figure}
 \end{frame}
-\subsection{Moses}
-% XXX: Hier Änderungen einpflanzen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Moses}
+\begin{frame}
+  \begin{figure}
+  \frametitle{Phrase-Based Alignment}
+  \includegraphics[width=0.50\textwidth]{graphics/phrases}
+  \caption{Phrases\footnote{URL:
+      \url{http://www.statmt.org/moses/img/waiph5.png} (30.11.2011)}}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \begin{figure}
+  \frametitle{Phrase-Based Applied}
+  \includegraphics[width=1.00\textwidth]{graphics/translationoptions}
+  \caption{Translations\footnote{URL:
+      \url{http://www.statmt.org/moses/img/translation-options.png} (30.11.2011)}}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \frametitle{Beam Search}
+  \begin{figure}
+  \includegraphics[width=0.50\textwidth]{graphics/beam}
+  \caption{Beam Search\footnote{URL: \url{http://seo.mindandmouth.com/wp-content/uploads/2010/03/bible-illuminated-by-beam-of-light1.jpg?f8021c} (30.11.2011)}}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \frametitle{Beam Example}
+  \begin{figure}
+  \includegraphics[width=1.00\textwidth]{graphics/translationoptions}
+  \caption{Translations\footnote{URL:
+      \url{http://www.statmt.org/moses/img/translation-options.png} (30.11.2011)}}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \begin{figure}
+  \frametitle{Beam Applied}
+  \includegraphics[width=0.70\textwidth]{graphics/beam_applied}
+  \caption{Translations\footnote{URL:
+      \url{http://www.statmt.org/moses/img/beam.png} (30.11.2011)}}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \frametitle{Beam Search Data}
+  \begin{figure}
+  \includegraphics[width=0.70\textwidth]{graphics/future_cost}
+  \caption{Future Cost\footnote{URL:
+      \url{http://www.statmt.org/moses/img/phrase-beam-future-cost.png} (30.11.2011)}}
+  \end{figure}
+\end{frame}
+\begin{frame}
+  \frametitle{Factored}
+  \begin{itemize}
+    \item Multi-Dimensionale Daten
+    \item z.B. Morphologie
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{Factored Example}
+  
+  \begin{quote}
+    jIlegh'egh
+  \end{quote}
+  \begin{quote}
+    [SG][1PERS][NONE][VERB]legh[oneself]
+  \end{quote}
+\end{frame}
 \begin{frame}
   \frametitle{Lektüreempfehlungen}
 
