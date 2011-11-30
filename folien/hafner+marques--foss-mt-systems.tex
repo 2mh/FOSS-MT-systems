@@ -21,7 +21,6 @@
 \begin{document}
   \maketitle
 
-
 \begin{frame}
 \frametitle{Referatsübersicht}
 \tableofcontents
@@ -32,7 +31,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problemstellung}
 % SUBSECTION
-\subsection{Warum Closed Source vs. Open Source Software?}
+% Bilder: Esperanto, Klingonisch, Baskisch, Quechua
+\subsection{Übersetzen von und nach Minderheitensprachen}
+% Minderheitensprachen
+\begin{frame}
+\frametitle{Minderheitensprachen}
+\begin{itemize}
+\item Sprachen einer (kleinen) (Sub-)Kultur oder einer kleinen (geografischen) Region
+\item Beispiele: Klingonisch, Quechua, Baskisch, Esperanto
+\end{itemize}
+\end{frame}
+% Probleme
+\begin{frame}
+\frametitle{Problem: Bei vielen MÜ-Systemen keine Unterstützung}
+\begin{itemize}
+\item Grosse/bekannte/kommerzielle MÜ-Systeme orientieren sich an Nachfrage/Rendite
+\item Datenmaterial für Minderheitensprachen ist nur spärlich vorhanden
+\end{itemize}
+\end{frame}
+% SUBSECTION
+\subsection{Closed Source vs. Open Source Software}
 % OSS (generell)
 \begin{frame}
 \frametitle{Open Source Software (generell)}
@@ -45,8 +63,8 @@
 \item[\emph{Software}] Betriebssysteme, Browser, Spiele u. a.; auch: MÜ-Systeme :)
 \end{itemize}
 \end{frame}
-\begin{frame}
 % CSS (generell)
+\begin{frame}
 \frametitle{Closed Source Software (generell)}
 \begin{figure}
   \includegraphics[width=0.30\textwidth]{graphics/cssblackbox}
@@ -58,21 +76,93 @@
 \end{itemize}
 \end{frame}
 % OSS vs. CSS
-
-% SUBSECTION
-\subsection{Minderheitensprachen}
-% Bilder: Esperanto, Klingonisch, Baskisch, Quechua
+\begin{frame}
+\frametitle{Open Source Software: Vorteile (1)}
+\begin{figure}
+  \includegraphics[width=0.30\textwidth]{graphics/bartopen}
+  \caption{Bart: *embraceOpenSource*\footnote{URL: \url{http://toomanytabs.com/blog/wp-content/uploads/2010/11/Bartopen.gif} (30.11.2011)}}
+  \end{figure}
+\begin{itemize}
+\item \emph{Programmcode} / \emph{Daten} sind kostenfrei (üblich)
+\item \emph{Änderung/Erweiterung} des Programmverhaltens und der -funktionalität möglich
+\item \emph{Nachvollzug} des Outputs möglich
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Open Source Software: Vorteile (2)}
+\begin{figure}
+  \includegraphics[width=0.30\textwidth]{graphics/bartopen}
+  \caption{Bart: *embraceOpenSource*\footnote{URL: \url{http://toomanytabs.com/blog/wp-content/uploads/2010/11/Bartopen.gif} (30.11.2011)}}
+  \end{figure}
+\begin{itemize}
+\item \emph{Kultur} des Teilens / kollektive Entwicklung
+\item \emph{Partizipation} ist möglich und erwünscht
+\end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Herausforderungen \& Lösungsansätze}
+\begin{frame}
+\frametitle{Titel}
+\end{frame}
 \subsection{Sparse data-Probleme}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Zwei OSS-MÜ-Systeme: Apertium und Moses}
 \subsection{Apertium}
+% Übersicht
+\begin{frame}
+\frametitle{Apertium: Merkmale (1)}
+\begin{figure}
+  \includegraphics[width=0.20\textwidth]{graphics/xml}
+  \caption{Apertium-Logo\footnote{URL: \url{http://www.eamt.org/corporate/logos/apertium.png} (30.11.2011)}}
+  \end{figure}
+\begin{itemize}
+\item Entwicklungsschwerpunkt in Spanien
+\item GPL-lizensiert
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Apertium: Merkmale (2)}
+\begin{itemize}
+\item RBMT
+\item Unterstützung für 28 Sprachpaare
+\end{itemize}
+\end{frame}
+% Funktionsweise (grob)
+\begin{itemize}
+\item RBMT
+\item Unterstützung für 28 Sprachpaare
+\end{itemize}
+\end{frame}
+% Technologien
+\begin{frame}
+\frametitle{Technologien (Shallow-Transfer)}
+\begin{itemize}
+\item Für syntaxähnliche Sprachen
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Technologien (Advanced Transfer)}
+\begin{itemize}
+\item Für syntax\emph{un}ähnliche Sprachen
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Technologien (XML)}
+\begin{figure}
+  \includegraphics[width=0.30\textwidth]{graphics/xml}
+  \caption{XML-Beispiel\footnote{URL: \url{http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/XML.svg/275px-XML.svg.png} (30.11.2011)}}
+  \end{figure}
+\begin{itemize}
+\item Linguistische Daten werden in der XML gehalten
+\item Interoperabilität ist damit gesichert
+\end{itemize}
+\end{frame}
 \subsection{Moses}
+% XXX: Hier Änderungen einpflanzen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
