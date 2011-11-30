@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
+\usepackage{beamerthemesplit}
 \usepackage[numbers]{natbib}
 
 \newcommand{\first}[1]{\emph{#1}}
@@ -17,39 +18,40 @@
 \begin{document}
   \maketitle
 
-\begin{frame}
-  \frametitle{Referatsübersicht}
-
-  \begin{itemize}
-  \item Problemstellung
-  \item Herausforderungen \& Lösungsansätze
-  \item Zwei OSS-MÜ-Systeme: Apertium und Moses
-  \item Lektüreempfehlungen
-  \item Fragen
-  \end{itemize}
-\end{frame}
 
 \begin{frame}
-  \frametitle{Problemstellung}
-  \begin{itemize}
-  \item test
-  \end{itemize}
+\frametitle{Referatsübersicht}
+\tableofcontents
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problemstellung}
+\subsection{Warum Closed Source vs. Open Source Software?}
 \begin{frame}
-  \frametitle{Herausforderungen \& Lösungsansätze}
-  \begin{itemize}
-  \item test
-  \end{itemize}
+\frametitle{Open Source Software}
+\begin{figure}
+  \includegraphics[width=0.35\textwidth]{graphics/ossmatrix}
+  \caption{Open Source Software (Logos)\footnote{URL: \url{http://cdn.lostintechnology.com/wp-content/uploads/2010/12/opensource.jpg} (29.11.2011)}}
+  \end{figure}
 \end{frame}
-
-\begin{frame}
-  \frametitle{Zwei OSS-MÜ-Systeme: Apertium und Moses}
-  \begin{itemize}
-  \item test
-  \end{itemize}
-\end{frame}
-
+\subsection{Minderheitensprachen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Herausforderungen \& Lösungsansätze}
+\subsection{Sparse data-Probleme}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Zwei OSS-MÜ-Systeme: Apertium und Moses}
+\subsection{Apertium}
+\subsection{Moses}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Literatur}
 \begin{frame}
   \frametitle{Lektüreempfehlungen}
 
@@ -65,14 +67,14 @@ Forcada, Mikel L.: \emph{Open-source machine translation: an opportunity for min
 \end{thebibliography}
 
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fragen}
 \begin{frame}
-  \frametitle{Fragen?}
   \begin{figure}
   \includegraphics[width=0.35\textwidth]{graphics/xkcd--cl}
-  \caption{XKCD - Nr. 114. URL: \url{http://xkcd.com/114/} (29.11.2011)}
+  \caption{XKCD - Nr. 114\footnote{URL: \url{http://xkcd.com/114/} (29.11.2011)}}
   \end{figure}
 \end{frame}
-
-
 \end{document}
